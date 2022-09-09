@@ -1,9 +1,9 @@
 * {
 	padding: 0;
 	margin: 0;
-	text-decoration: none;
-	list-style: none;
-	box-sizing: border-box;
+	/* text-decoration: none; */
+	/* list-style: none; */
+	/* box-sizing: border-box; */
 }
 :root {
 	--blue: #65ff1e;
@@ -12,42 +12,18 @@
 body {
 	font-family: montserrat;
 }
-svg{
-	stroke: #1d075f;
-	opacity: 0;
-}
-/* #layer1, */
-/* #layer2,
-#layer3,
-#layer4,
-#layer5,
-#layer6,
-#layer7,
-#layer8,
-#layer9,
-#layer10,
-#layer11,
-#layer12,
-#layer13,
-#layer14,
-#layer15
-{
-	cursor: pointer;
-	transform-box: fill-box;
-	display: none;
-} */
-
-g#layer3{
-	opacity: 1;
-	background-position-x: right;
-	stroke: crimson;
-}
 nav {
 	background: #5434af;
 	height: 80px;
 	width: 100%;
 }
-
+svg path{
+	width: auto;
+	height: 100px;
+	opacity: 1;
+	stroke:#5434af;
+	
+}
 label.logo {
 	color: var(--blue);
 	font-size: 35px;
