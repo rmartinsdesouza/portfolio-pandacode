@@ -13,11 +13,11 @@ body {
 	font-family: montserrat;
 }
 svg{
-	background-color: #1d075f;
-	display: none;
+	stroke: #1d075f;
+	opacity: 0;
 }
-#layer1,
-#layer2,
+/* #layer1, */
+/* #layer2,
 #layer3,
 #layer4,
 #layer5,
@@ -34,10 +34,13 @@ svg{
 {
 	cursor: pointer;
 	transform-box: fill-box;
-}
+	display: none;
+} */
 
-#layer1{
-
+g#layer3{
+	opacity: 1;
+	background-position-x: right;
+	stroke: crimson;
 }
 nav {
 	background: #5434af;
