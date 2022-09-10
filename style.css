@@ -1,29 +1,57 @@
 * {
 	padding: 0;
 	margin: 0;
-	/* text-decoration: none; */
-	/* list-style: none; */
-	/* box-sizing: border-box; */
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
 }
+
 :root {
-	--blue: #65ff1e;
 	--white: #ffffff;
+	--green-light: #7bc234;
+	--green-dark: #7e8f6e;
+	--yellow: #f5ed5b;
+	--purple: #afaafa;
+	--blue: #3451C2;
 }
+
 body {
 	font-family: montserrat;
 }
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
 nav {
-	background: #5434af;
+	background: var(--blue);
 	height: 80px;
 	width: 100%;
 }
-svg path{
-	width: auto;
-	height: 100px;
-	opacity: 1;
-	stroke:#5434af;
-	
+
+#pandaWalking {
+	width: 2000px;
+	height: 175px;
+	background: url("pandaWalking.svg");
+	animation: walking 1.5s steps(6) infinite;
+	opacity: 0;
+	/* Oculta Panda */
+
 }
+
+@keyframes walking {
+	0% {
+		background-position: -1500px;
+	}
+
+
+	100% {
+		background-position: 0px;
+	}
+
+}
+
 label.logo {
 	color: var(--blue);
 	font-size: 35px;
@@ -31,15 +59,18 @@ label.logo {
 	padding: 0 100px;
 	font-weight: bold;
 }
+
 nav ul {
 	float: right;
 	margin-right: 20px;
 }
+
 nav ul li {
 	display: inline-block;
 	line-height: 80px;
 	margin: 0 5px;
 }
+
 nav ul li a {
 	color: white;
 	font-size: 17px;
@@ -47,10 +78,12 @@ nav ul li a {
 	border-radius: 3px;
 	text-transform: uppercase;
 }
+
 a.active, a:hover {
 	background: #1d075f;
 	transition: .5s;
 }
+
 .checkbtn {
 	font-size: 30px;
 	color: white;
@@ -60,22 +93,74 @@ a.active, a:hover {
 	cursor: pointer;
 	display: none;
 }
+
 #check {
 	display: none;
 }
+
+.home{
+	display: flex;
+	flex-wrap: wrap;
+	min-height: 500px;
+}
+
+.skills{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 10px;
+	min-height: 500px;
+}
+
+
+.skills #svg circle {
+	stroke-dashoffset: 0;
+	transition: stroke-dashoffset 1s linear;
+	stroke: #666;
+	stroke-width: 1em;
+}
+
+.skills #svg #bar {
+	stroke: #FF9F1E;
+}
+
+.experience{
+	min-height: 500px;
+}
+
+.cards{
+	min-width: 40px;
+	min-height: 80px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#cont {
+	display: block;
+	height: 200px;
+	width: 200px;
+	margin: 2em auto;
+	box-shadow: 0 0 1em black;
+	border-radius: 100%;
+	position: relative;
+}
+
 @media (max-width: 952px){
 	label.logo{
 		font-size: 30px;
 		padding-left: 50px;
 	}
+
 	nav ul li a{
 		font-size: 16px;
 	}
+
 }
+
 @media (max-width: 858px){
 	.checkbtn {
 		display: block;
 	}
+
 	ul{
 		position: fixed;
 		width: 100%;
@@ -86,19 +171,24 @@ a.active, a:hover {
 		text-align: center;
 		transition: all .5s;
 	}
+
 	nav ul li{
 		display: block;
 		margin: 50px 0;
 		line-height: 30px;
 	}
+
 	nav ul li a {
 		font-size: 20px;
 	}
+
 	a:hover, a.active {
 		background: none;
 		color: #5434af;
 	}
+
 	#check:checked ~ ul {
 		left: 0;
 	}
+
 }
